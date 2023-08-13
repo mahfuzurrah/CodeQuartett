@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    padding-top: 80px;
+  }
+  
+  .gallery {
+    position: relative;
+    margin: 0 auto;
+    top: 80px;
+  }
+  
+  .images {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .icon {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    margin: 4px;
+    cursor: pointer;
+  }
+  
+  /* You can add more specific styling as needed */
+  
