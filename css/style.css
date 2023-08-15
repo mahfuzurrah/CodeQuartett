@@ -500,13 +500,13 @@ figure.flip_card.photostack-current.photostack-flip{
 
 
 .photostack nav span.current.flippable.flip, .photostack nav span.current.flip{
-	transform: scale(1.5) rotateY(-180deg) translateZ(-1px);
+	transform: scale(1.6) rotateY(-180deg) translateZ(-1px);
     background: #67B32E;
 }
 
 .btn_area{
 	position: relative;
-	top: -37px;
+	top: -36px;
 	height: 30px;
 }
 
