@@ -341,6 +341,13 @@ figure.flip_card.photostack-current .photostack-back{
 padding: 16px;
 }
 
+/* .flip_card{
+	border-radius: 16px;
+} */
+
+.flip_card img{
+	border-radius: 16px;
+}
 /* Overlays */
 
 /* Initial overlay on photostack container */
