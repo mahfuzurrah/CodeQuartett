@@ -36,7 +36,7 @@ img {
 }
 
 section {
-	padding: 4.5rem 0;
+	padding: 2rem 0;
 }
 
 /* Body part css */
@@ -73,12 +73,18 @@ section {
 	background: #67B32E;
 }
 
-.sm-card {
-	display: flex;
-	align-items: center;
+.sm-card{
+	display: math !important;
 	flex-direction: row;
+	height: 60px;
 	overflow: hidden;
 }
+
+.bt_sm_card{
+	height: 60px;
+	overflow: hidden;
+}
+
 
 .sm-card img:hover {
 	rotate: 360deg;
