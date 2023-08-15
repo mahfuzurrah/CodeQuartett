@@ -2,55 +2,40 @@ Photostack.prototype._addNavigation = function() {
     // add nav dots
     this.nav = document.createElement('nav');
     var inner = '';
-    
-    // Add "Previous" button
-    inner += '<button class="photostack-nav-button prev-button"><img src="img/back.svg" alt="" /></button>';
 
     for (var i = 0; i < this.itemsCount; ++i) {
         inner += '<span></span>';
     }
 
-    // Add "Next" button
-    inner += '<button class="photostack-nav-button next-button"><img src="img/next.svg" alt="" /></button>';
-    
     this.nav.innerHTML = inner;
     this.el.appendChild(this.nav);
     this.navDots = [].slice.call(this.nav.children);
 
     var self = this;
 
-    // Add click event listeners to the "Previous" and "Next" buttons
-    var prevButton = this.nav.querySelector('.prev-button');
-    var nextButton = this.nav.querySelector('.next-button');
-
-    prevButton.addEventListener('click', function () {
-        self._navigate('prev');
+    // Add click event listeners to the navigation dots
+    this.navDots.forEach(function(dot, index) {
+        dot.addEventListener('click', function() {
+            self._navigateTo(index);
+        });
     });
 
+    // Rotate the first image (you should define the CSS class for initial rotation)
+    var images = this.el.querySelectorAll('.photostack > figure > div');
+    if (images.length > 0) {
+        images[0].classList.add('rotate-initial'); // Define the CSS class for initial rotation
+    }
+
+    var nextButton = document.getElementById('nextButton');
+    var backButton = document.getElementById('backButton');
+
+    // Add click event listeners to the next and back buttons
     nextButton.addEventListener('click', function () {
         self._navigate('next');
     });
 
-    // Remove the "current flippable" class from navigation buttons
-    
-}
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    var hoverElements = document.querySelectorAll('.flippable');
-    var flipCard = document.querySelector('.flip_card');
-    
-    hoverElements.forEach(function(element) {
-        element.addEventListener("click", function() {
-            flipCard.classList.toggle('active');
-        });
+    backButton.addEventListener('click', function () {
+        self._navigate('prev');
     });
-});
-
-
-
-
-
-
-
+}
 
