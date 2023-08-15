@@ -4,14 +4,14 @@ Photostack.prototype._addNavigation = function() {
     var inner = '';
     
     // Add "Previous" button
-    inner += '<button class="photostack-nav-button prev-button"><i class="fa-solid fa-arrow-left-long"></i></button>';
+    inner += '<button class="photostack-nav-button prev-button"><img src="img/back.svg" alt="" /></button>';
 
     for (var i = 0; i < this.itemsCount; ++i) {
         inner += '<span></span>';
     }
 
     // Add "Next" button
-    inner += '<button class="photostack-nav-button next-button"><i class="fa-solid fa-arrow-right-long"></i></button>';
+    inner += '<button class="photostack-nav-button next-button"><img src="img/next.svg" alt="" /></button>';
     
     this.nav.innerHTML = inner;
     this.el.appendChild(this.nav);
@@ -34,6 +34,22 @@ Photostack.prototype._addNavigation = function() {
     // Remove the "current flippable" class from navigation buttons
     
 }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    var hoverElements = document.querySelectorAll('.flippable');
+    var flipCard = document.querySelector('.flip_card');
+    
+    hoverElements.forEach(function(element) {
+        element.addEventListener("click", function() {
+            flipCard.classList.toggle('active');
+        });
+    });
+});
+
+
+
+
 
 
 

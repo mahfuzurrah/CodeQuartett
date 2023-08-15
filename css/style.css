@@ -61,11 +61,12 @@ section {
 	border-radius: 8px;
 	cursor: pointer;
 	font-size: 20px;
+	color: #222222
 }
 
 .nav_menu li a.active,
 .nav_menu li a.active:hover {
-	background: #67B32E;
+	background: #77369A;
 	color: white;
 }
 
@@ -134,38 +135,16 @@ font-size: 18px;
 	color: #67B32E;
 }
 
-#shadow-host-companion{
-	display: none;
+a{
+	color: #67B32E;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* photostack  */
 
 
 .photostack {
-	background: #ddd;
+	background: #262729;
 	position: relative;
 	text-align: center;
 	overflow: hidden;
@@ -175,14 +154,26 @@ font-size: 18px;
 	height: 80vh;
 }
 
+
+@media screen and (max-width: 768px){
+	.js .photostack{
+		height: 95vh !important;
+	}
+	
+}
+
 .photostack-start {
 	cursor: pointer;
+}
+button{
+	border: none;   
 }
 
 .photostack-nav-button{
 	width: 50px;
 	height: 50px;
 	border-radius: 100px;
+	background: rgba(103, 179, 46, 0.5);
 }
 
 /* Wrapper and figures */
@@ -198,10 +189,12 @@ font-size: 18px;
 	width: 320px;
 	position: relative;
 	display: inline-block;
-	background: #fff;
+	background: #eeeeee;
 	padding: 20px;
 	text-align: center;
 	margin: 5px;
+	/* -webkit-perspective: 600px;
+	-moz-perspective: 600px; */
 }
 
 .js .photostack figure {
@@ -314,12 +307,13 @@ font-size: 18px;
 }
 
 .photostack nav span.current {
-	background: #888;
-	-webkit-transform: scale(1);
-	transform: scale(1);
+	background: #67B32E;
+	-webkit-transform: scale(1.5);
+	transform: scale(1.5);
 	display: block;
 }
 
+.photostack nav span.current.flippable.flip,
 .photostack nav span.current.flip {
 	-webkit-transform: scale(1) rotateY(-180deg) translateZ(-1px);
 	transform: scale(1) rotateY(-180deg) translateZ(-1px);
@@ -330,6 +324,10 @@ font-size: 18px;
 	opacity: 1;
 	-webkit-transition-delay: 0.4s;
 	transition-delay: 0.4s;
+}
+
+figure.flip_card.photostack-current .photostack-back{
+padding: 16px;
 }
 
 /* Overlays */
@@ -473,4 +471,29 @@ figure.photostack-current::after {
 	background: #888;
 	-webkit-transform: scale(0.61);
 	transform: scale(0.61);
+}
+
+.empty_card_for_btn{
+	background: transparent !important;
+	display: none;
+}
+
+.photostack figure.empty_card_for_btn::after{
+	background: transparent !important;
+	display: none;
+}
+
+figure.flip_card.photostack-current.photostack-flip{
+	z-index: 1000;
+}
+
+
+.photostack nav span.current.flippable.flip, .photostack nav span.current.flip{
+	transform: scale(1.5) rotateY(-180deg) translateZ(-1px);
+    background: #67B32E;
+}
+
+
+#shadow-host-companion{
+	display: none;
 }
