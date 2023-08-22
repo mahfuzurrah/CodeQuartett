@@ -161,7 +161,9 @@ a{
 	position: relative;
 	text-align: center;
 	overflow: hidden;
-	border: 10px solid #030303;
+	border: 10px solid #5c5b5b;
+	border-left: none;
+	border-right: none;
 }
 
 .js .photostack {
