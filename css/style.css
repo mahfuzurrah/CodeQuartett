@@ -85,7 +85,7 @@ section {
 	overflow: hidden;
 }
 
-
+.bt_sm_card img:hover,
 .sm-card img:hover {
 	rotate: 360deg;
 	transition: all 0.5s ease-in-out;
@@ -157,6 +157,7 @@ a{
 	position: relative;
 	text-align: center;
 	overflow: hidden;
+	border: 10px solid #030303;
 }
 
 .js .photostack {
@@ -341,9 +342,9 @@ figure.flip_card.photostack-current .photostack-back{
 padding: 16px;
 }
 
-/* .flip_card{
+.flip_card{
 	border-radius: 16px;
-} */
+}
 
 .flip_card img{
 	border-radius: 16px;
