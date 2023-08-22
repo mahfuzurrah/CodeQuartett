@@ -79,7 +79,6 @@ section {
 .nav_menu li a.active,
 .nav_menu li a.active:hover {
 	background: #67B32E;
-	text-decoration: underline !important;
 }
 
 
